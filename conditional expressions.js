@@ -22,4 +22,4 @@ switch(new Date().getDay()){
         day="saturday";
         break;
 }
-console.log("today is "+ day);
+console.log("today is "+ day);//today is wednesday
