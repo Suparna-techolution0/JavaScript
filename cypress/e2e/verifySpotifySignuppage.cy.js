@@ -15,6 +15,7 @@ describe("Verify Signup page", () => {
     cy.get("#year").type("1999");
     //select month
     cy.get("#month").select("February");
+
     //pass the input into day text field
     cy.get("#day").type("3");
     cy.wait(1000);
@@ -35,10 +36,9 @@ describe("Verify Signup page", () => {
       .its("0.contentDocument.body")
       .should("be.visible")
       .then(cy.wrap);
-    cy.wait(5000);
     iframe.click();
-    cy.wait(5000);
+    cy.wait(20000);
     //click on submit
-    cy.get("[type='submit']").click();
+    cy.get("[type='submit']").click({ force: true });
   });
 });
