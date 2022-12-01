@@ -24,6 +24,14 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-/// <reference types= "cypress" /
+///<reference types= "cypress" />
 
 /// <reference types= "cypress-xpath" />
+Cypress.Commands.add("clickLogin", (label) => {
+  cy.get("a").contains(label).click();
+});
+Cypress.Commands.add("loginApp", (MobileNumber, Password) => {
+  cy.get("input[class='_2IX_2- VJZDxU']").type(MobileNumber);
+  cy.get("input[type='password']").type(Password);
+  cy.get("button[class='_2KpZ6l _2HKlqd _3AWRsL']").click();
+});
