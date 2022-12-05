@@ -30,8 +30,8 @@
 Cypress.Commands.add("clickLogin", (label) => {
   cy.get("a").contains(label).click();
 });
-Cypress.Commands.add("loginApp", (MobileNumber, Password) => {
-  cy.get("input[class='_2IX_2- VJZDxU']").type(MobileNumber);
+Cypress.Commands.add("loginApp", (email, Password) => {
+  cy.get("#login-username").type(email);
   cy.get("input[type='password']").type(Password);
-  cy.get("button[class='_2KpZ6l _2HKlqd _3AWRsL']").click();
+  cy.get("#login-button").click();
 });
