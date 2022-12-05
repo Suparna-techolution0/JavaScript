@@ -6,7 +6,7 @@ describe("Test Spotify Webapplication", () => {
     cy.get('[data-testid="login-button"] > .ButtonInner-sc-14ud5tc-0').click();
     //pass the input into mobile number and password text field
     cy.loginApp("suparna9919@gmail.com", "Suparna@123");
-    cy.wait(2000);
+    cy.wait(5000);
     //click on search
     cy.clickLogin("Search");
     // search for a song
