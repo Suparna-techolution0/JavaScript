@@ -31,7 +31,7 @@ Cypress.Commands.add("clickLogin", (label) => {
   cy.get("a").contains(label).click();
 });
 Cypress.Commands.add("loginApp", (email, Password) => {
-  cy.get("#login-username").type(email);
-  cy.get("input[type='password']").type(Password);
-  cy.get("#login-button").click();
+  cy.get("input[aria-label='Phone number, username, or email']").type(email);
+  cy.get("input[name='password']").type(Password);
+  cy.get("button[type='submit']").click();
 });
