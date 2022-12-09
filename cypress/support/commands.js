@@ -27,11 +27,13 @@
 ///<reference types= "cypress" />
 
 /// <reference types= "cypress-xpath" />
-Cypress.Commands.add("clickLogin", (label) => {
-  cy.get("a").contains(label).click();
+Cypress.Commands.add("clickLink", (label) => {
+  cy.get("a").contains(label).click({
+    force: true,
+  });
 });
 Cypress.Commands.add("loginApp", (email, Password) => {
-  cy.get("input[aria-label='Phone number, username, or email']").type(email);
-  cy.get("input[name='password']").type(Password);
-  cy.get("button[type='submit']").click();
+  cy.get(":nth-child(1) > .x1npaq5j > ._aa48 > ._aa4b").type(email);
+  cy.get(":nth-child(2) > .x1npaq5j > ._aa48 > ._aa4b").type(Password);
+  cy.get("._abc2 > :nth-child(3)").click();
 });

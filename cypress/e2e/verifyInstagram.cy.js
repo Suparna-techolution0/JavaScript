@@ -10,14 +10,14 @@ describe("Test Instagram Webapplication", () => {
     cy.wait(2000);
     //go to home page
     cy.get(
-      "body > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+      ".x1iyjqo2 > :nth-child(1) > :nth-child(1) > .x1n2onr6 > .x1i10hfl"
     ).click();
     cy.wait(5000);
     //click on pop up
     cy.get("._a9_1").click();
     //click on ...
     cy.get(
-      "body > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > main:nth-child(2) > div:nth-child(1) > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > article:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > button:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+      ":nth-child(1) > ._ab99._ab9h > ._aasi > ._ab9i > ._aasm > ._abl-"
     ).click();
     //click on Share to
     cy.get("._a9-z > :nth-child(5)").click();
@@ -34,10 +34,10 @@ describe("Test Instagram Webapplication", () => {
     cy.get(".xwmz7sl").click();
     //go to friend's profile
     cy.get(
-      "body > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)"
+      ":nth-child(2) > ._abm4 > .x1i10hfl > ._ab9_ > ._abbj > ._ab8w > .xnz67gz > .x6umtig"
     ).click();
     cy.wait(2000);
     //verify the post is sent.
-    cy.get(":nth-child(5) > ._ac72 > .x78zum5").should("be.visible");
+    cy.get(":nth-child(3) > ._ac72 > .x78zum5").should("be.visible");
   });
 });

@@ -11,6 +11,7 @@ describe("Test Spotify Webapplication", () => {
     cy.clickLogin("Search");
     // search for a song
     cy.get('[data-testid="search-input"]').type("shape of you").type("{enter}");
+
     //click on songs
     cy.get(
       '[href="/search/shape%20of%20you/tracks"] > .Chip__ChipComponent-sc-ry3uox-0 > .ChipInner__ChipInnerComponent-sc-1ly6j4j-0'
@@ -25,6 +26,7 @@ describe("Test Spotify Webapplication", () => {
     ).click();
     //click on Liked Songs Page.
     cy.clickLogin("Liked Songs");
+
     //Verify the song is present in Liked Songs page.
     cy.get(
       '[data-testid="internal-track-link"] > .Type__TypeElement-sc-goli3j-0'

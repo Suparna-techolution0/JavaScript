@@ -3,7 +3,7 @@ describe("Verify Flipkart cart page", () => {
     //pass the url
     cy.visit("https://www.flipkart.com/");
     //click on login
-    cy.clickLogin("Login");
+    cy.clickLink("Login");
     //pass the input into mobile number and password text field
     cy.loginApp("8145988527", "Suparna@123");
     cy.wait(2000);
@@ -22,12 +22,12 @@ describe("Verify Flipkart cart page", () => {
     cy.get("#pincodeInputId").should("be.visible");
     //enter pincode and check
     cy.get("#pincodeInputId").type("700135").type("{enter}");
-    cy.wait(100000);
+    cy.wait(5000);
     //click on add to cart button
     cy.get(".row > :nth-child(1) > ._2KpZ6l").click({
       force: true,
     });
-    cy.wait(50000);
+    cy.wait(5000);
     //verify product is present in the cart page.
     cy.get("._2Kn22P").should(
       "have.text",
