@@ -32,8 +32,12 @@ Cypress.Commands.add("clickLink", (label) => {
     force: true,
   });
 });
-Cypress.Commands.add("loginApp", (email, Password) => {
+/*Cypress.Commands.add("loginApp", (email, Password) => {
   cy.get(":nth-child(1) > .x1npaq5j > ._aa48 > ._aa4b").type(email);
   cy.get(":nth-child(2) > .x1npaq5j > ._aa48 > ._aa4b").type(Password);
   cy.get("._abc2 > :nth-child(3)").click();
+});*/
+Cypress.Commands.add("loginApp", (email, Password) => {
+  cy.get("#login-username").type(email);
+  cy.get("#login-signin").click();
 });
