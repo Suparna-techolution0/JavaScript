@@ -1,4 +1,5 @@
 describe("Verify Flipkart cart page", () => {
+  
   it("Verify Cart Page", () => {
     //pass the url
     cy.visit("https://www.flipkart.com/");

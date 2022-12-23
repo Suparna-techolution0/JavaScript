@@ -39,5 +39,6 @@ Cypress.Commands.add("clickLink", (label) => {
 });*/
 Cypress.Commands.add("loginApp", (email, Password) => {
   cy.get("#login-username").type(email);
-  cy.get("#login-signin").click();
+  cy.get("#login-password").type(Password);
+  cy.get("#login-button").click();
 });

@@ -1,4 +1,5 @@
 describe("Verify slack Home page", () => {
+  
   it("Verify page", () => {
     //pass the url
     cy.visit("https://techolution.slack.com/");

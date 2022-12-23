@@ -1,4 +1,5 @@
 describe("Test Instagram Webapplication", () => {
+  
   it("end to end testing of instagram", () => {
     //pass the url
     cy.visit("https://www.instagram.com/");

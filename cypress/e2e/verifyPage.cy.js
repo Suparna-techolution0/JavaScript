@@ -1,4 +1,5 @@
 describe("Verify the page", () => {
+  
   it("test1", () => {
     //pass the url
     cy.visit("https://www.google.co.in/");
