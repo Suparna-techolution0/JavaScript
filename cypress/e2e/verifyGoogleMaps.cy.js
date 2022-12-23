@@ -1,6 +1,6 @@
 describe("Verify google maps", () => {
-  //open url
-  beforeEach(() => {
+
+  beforeEach("open url", () => {
     //pass the url
     cy.visit("https://www.google.com/maps/");
   });

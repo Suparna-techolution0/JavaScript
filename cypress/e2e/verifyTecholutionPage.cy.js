@@ -1,4 +1,5 @@
 describe("Verify the page", () => {
+  
   it("verify home page", () => {
     //pass the url
     cy.visit("https://techolution.com/");
@@ -13,6 +14,8 @@ describe("Verify the page", () => {
   it("verify contact us page", () => {
     //click on Menu
     cy.get("#react-burger-menu-btn").click();
+    //verify innovate@techolution.com mail id is present
+    cy.get(".menu_footer_mail").should("contain", "innovate@techolution.com");
     cy.wait(5000);
     //click on Contact Us link
     cy.clickLink("Contact Us");
@@ -28,7 +31,7 @@ describe("Verify the page", () => {
     //click on How can we help?
     cy.get("#react-select-20-placeholder").click();
     //select product innovation option
-    cy.get("#react-select-2-option-1 > label").click();
+    cy.get("#react-select-2-option-1 > label").should("be.visible").click();
     cy.get(".multi_select__value-container").click();
     //pass input into Contact Number text field
     cy.get("input[name='phone']").type("9635699219");
