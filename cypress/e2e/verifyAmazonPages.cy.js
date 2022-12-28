@@ -85,6 +85,7 @@ describe("Verify Amazon Pages", () => {
     cy.get(
       "span[id='shipToThisAddressButton'] span[class='a-button-inner']"
     ).click();
+    cy.wait(6000)
     //verify Select a payment method text is present
     cy.xpath("(//div[@class='a-column a-span10'])[1]").should(
       "contain",
@@ -105,6 +106,8 @@ describe("Verify Amazon Pages", () => {
       "contain",
       "Order Total:"
     );
+    //go back of the current page
+    cy.go(-3);
   });
 
   it("Verify Fresh Page", () => {
