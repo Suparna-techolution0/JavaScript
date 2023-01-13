@@ -43,10 +43,11 @@ Cypress.Commands.add("loginApp", (email, Password) => {
   cy.get("#login-password").type(Password);
   cy.get("#login-button").click();
 });
+
 Cypress.Commands.add('iframeCustom', { prevSubject: 'element' }, ($iframe) => {
   return new Cypress.Promise((resolve) => {
     $iframe.ready(function () {
       resolve($iframe.contents().find('body'));
+    });
   });
-});
 });
