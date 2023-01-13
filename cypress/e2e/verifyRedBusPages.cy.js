@@ -41,9 +41,9 @@ describe("Verify redBus Pages", () => {
     //click on verify otp.
     cy.iframe(".modalIframe").find("#verifyUser").click();
     cy.wait(7000);
-    //click on close.
-    cy.get(".modalCloseSmall > .icon-close").click();
-    //verify the title should be contain redBus.
-    cy.title().should("contain", "redBus");
+    //click on profile icon.
+    cy.get("#i-icon-profile").click();
+    //verify in the profile icon My Profile is present.
+    cy.ger("li[data-link='myprofile']").should("contain", "My Profile");
   });
 });
