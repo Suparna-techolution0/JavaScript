@@ -1,6 +1,6 @@
 describe("Test Instagram Webapplication", () => {
   
-  it("end to end testing of instagram", () => {
+  before("Login", () => {
     //pass the url
     cy.visit("https://www.instagram.com/");
     //click on login
@@ -8,6 +8,9 @@ describe("Test Instagram Webapplication", () => {
     cy.wait(5000);
     //pass the input into mobile number and password text field,login to the application
     cy.loginApp("suparna9919@gmail.com", "Suparna@890");
+  });
+
+  it("end to end testing of instagram", () => {
     cy.wait(2000);
     //go to home page
     cy.get(

@@ -25,8 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 ///<reference types= "cypress" />
-
+import "cypress-iframe";
 /// <reference types= "cypress-xpath" />
+
 Cypress.Commands.add("clickLink", (label) => {
   cy.get("a").contains(label).click({
     force: true,
@@ -41,4 +42,12 @@ Cypress.Commands.add("loginApp", (email, Password) => {
   cy.get("#login-username").type(email);
   cy.get("#login-password").type(Password);
   cy.get("#login-button").click();
+});
+
+Cypress.Commands.add('iframeCustom', { prevSubject: 'element' }, ($iframe) => {
+  return new Cypress.Promise((resolve) => {
+    $iframe.ready( () => {
+      resolve($iframe.contents().find('body'));
+    });
+  });
 });
