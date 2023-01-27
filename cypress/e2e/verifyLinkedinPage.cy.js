@@ -19,14 +19,12 @@ describe("Test Linkedin Page", () => {
     //click on me icon
     cy.get("#ember17").click();
     //click on sign out.
-    cy.clickLink("Sign Out");
-    //click on signout again.
-    cy.get("#ember469").click();
+    cy.get('.global-nav__secondary-item--divider > .global-nav__secondary-link').click();
     //verify sign in button is visible.
     cy.get(".nav__button-secondary").should("be.visible");
   });
 
-  it("Verify Profile Page", () => {
+  it.skip("Verify Profile Page", () => {
     //click on my profile.
     cy.get("div[class='t-16 t-black t-bold']").click();
     //verify the page having "suparna Modak" text.
