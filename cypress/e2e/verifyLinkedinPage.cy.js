@@ -56,8 +56,8 @@ describe("Test Linkedin Page", () => {
     cy.xpath("//span[normalize-space()='Save']").click();
 
     //verify the page is contain "Saroj Mohan Institute of Technology - India" text after clicking
-    cy.get(
-      ".pv-text-details__right-panel-item-text.hoverable-link-text.break-words.text-body-small.t-black"
+    cy.xpath(
+     "div[normalize-space()='Saroj Mohan Institute of Technology - India'] "
     ).should("contain", "Saroj Mohan Institute of Technology - India");
   });
 });
