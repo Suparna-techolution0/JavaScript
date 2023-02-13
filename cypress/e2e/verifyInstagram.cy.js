@@ -1,5 +1,4 @@
 describe("Test Instagram Webapplication", () => {
-  
   before("Login", () => {
     //pass the url
     cy.visit("https://www.instagram.com/");

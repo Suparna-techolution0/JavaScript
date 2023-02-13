@@ -39,9 +39,9 @@ Cypress.Commands.add("clickLink", (label) => {
   cy.get("._abc2 > :nth-child(3)").click();
 });*/
 Cypress.Commands.add("loginApp", (email, Password) => {
-  cy.get("#username").type(email);
-  cy.get("#password").type(Password);
-  cy.get("button[aria-label='Sign in']").click();
+  cy.get("input[name='username']").type(email);
+  cy.get("input[name='password']").type(Password);
+  cy.get("button[type='submit']").click();
 });
 
 Cypress.Commands.add("iframeCustom", { prevSubject: "element" }, ($iframe) => {
