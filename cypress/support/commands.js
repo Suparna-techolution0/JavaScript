@@ -39,15 +39,15 @@ Cypress.Commands.add("clickLink", (label) => {
   cy.get("._abc2 > :nth-child(3)").click();
 });*/
 Cypress.Commands.add("loginApp", (email, Password) => {
-  cy.get("#login-username").type(email);
-  cy.get("#login-password").type(Password);
-  cy.get("#login-button").click();
+  cy.get("input[name='username']").type(email);
+  cy.get("input[name='password']").type(Password);
+  cy.get("button[type='submit']").click();
 });
 
-Cypress.Commands.add('iframeCustom', { prevSubject: 'element' }, ($iframe) => {
+Cypress.Commands.add("iframeCustom", { prevSubject: "element" }, ($iframe) => {
   return new Cypress.Promise((resolve) => {
-    $iframe.ready( () => {
-      resolve($iframe.contents().find('body'));
+    $iframe.ready(() => {
+      resolve($iframe.contents().find("body"));
     });
   });
 });

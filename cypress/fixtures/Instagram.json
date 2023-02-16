@@ -1,0 +1,19 @@
+[
+  {
+    "username": "suparna9919@gmail.com",
+    "password": "Suparna@890",
+    "expected": "Profile"
+  },
+
+  {
+    "username": "suparna99@gmail.com",
+    "password": "Suparna@890",
+    "expected": "Sorry, your password was incorrect. Please double-check your password."
+  },
+
+  {
+    "username": "suparna9919@gmail.com",
+    "password": "Suparna123",
+    "expected": "Sorry, your password was incorrect. Please double-check your password."
+  }
+]
