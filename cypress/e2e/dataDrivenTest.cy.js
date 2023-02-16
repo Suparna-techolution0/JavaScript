@@ -19,7 +19,7 @@ describe("MyTestSuite", () => {
           cy.get(
             ':nth-child(8) > :nth-child(1) > div.x1n2onr6 > .x1i10hfl > .x3nfvp2 > .x6s0dn4 > [style="width: 100%;"] > ._aacl'
           ).should("have.text", userdata.expected);
-          //Logout
+          //click on settings.
           cy.get("svg[aria-label='Settings']").click();
           //Logout
           cy.xpath("//div[contains(text(),'Log out')]").click();
